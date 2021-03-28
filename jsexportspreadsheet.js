@@ -1,5 +1,5 @@
 /* @minisuperfiles
- * JsexportSpreedsheet v0.1beta
+ * JsexportSpreadsheet v0.1beta
  * Copyright (c) 2020 Mini Super Files | https://github.com/minisuperfiles/JsexportSpreedsheet/blob/master/LICENSE
  * https://github.com/minisuperfiles/JsexportSpreedsheet
  */
