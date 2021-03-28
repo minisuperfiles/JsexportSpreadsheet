@@ -1,9 +1,9 @@
 /* @minisuperfiles
- * JsexportSpreedsheet v0.1
+ * JsexportSpreedsheet v0.1beta
  * Copyright (c) 2020 Mini Super Files | https://github.com/minisuperfiles/JsexportSpreedsheet/blob/master/LICENSE
  * https://github.com/minisuperfiles/JsexportSpreedsheet
  */
-class JsexportSpreedsheet {
+class JsexportSpreadsheet {
     constructor(settings = {}) {
         //loadData
         if (typeof this.data == 'object') {
