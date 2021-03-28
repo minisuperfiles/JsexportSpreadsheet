@@ -1,0 +1,39 @@
+headleBigData() {
+        function longrun() { //async
+            var runnerNo = 1000;
+            var data = this.data
+            var noofround = Math.ceil(data.length / runnerNo), activeround = 0;
+         
+            if (data.length > runnerNo) {
+            for (var i = 1; i <= noofround; i++) {
+                setTimeout(function() {
+                    activeround++;
+                    if (activeround == 1) { //start
+                        //$("#ldsloader").show();
+                    }
+                    var start = ((activeround - 1) * runnerNo), end = (activeround * runnerNo), bodydata = [];
+                    if(activeround == noofround) {
+                        end = data.length;
+                    }
+                    for (var j = start; j < end; j++) {
+                        bodydata.push(data[j]);
+                    }
+                    pdfSettings.body = bodydata;
+                    //apply
+                    d.autoTable(pdfSettings);
+                    if (activeround == noofround) { //end
+                        //$("#ldsloader").hide();
+                        d.save(filename);
+                    }
+                }, (i * 100));
+            } 
+            } else {
+                $("#ldsloader").show();
+                pdfSettings.body = data;
+                //apply
+                d.autoTable(pdfSettings);
+                $("#ldsloader").hide();
+                d.save(filename);
+            }
+        }
+    }
